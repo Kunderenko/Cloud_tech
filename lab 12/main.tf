@@ -117,6 +117,6 @@ resource "aws_instance" "web" {
   ]
 
   tags = {
-    Name = "tasj9-ec2"
+    Name = "task9-ec2"
   }
 }
