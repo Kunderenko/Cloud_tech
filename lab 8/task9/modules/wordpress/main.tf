@@ -18,7 +18,7 @@ resource "docker_container" "wordpress" {
 
   ports {
     internal = 80
-    external = 8008
+    external = 8001
   }
 
   networks_advanced {
