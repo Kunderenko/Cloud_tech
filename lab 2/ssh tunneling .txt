@@ -1,0 +1,10 @@
+SSH port forwarding (SSH tunneling)
+Local port forwarding allows you to forward a port on the local (ssh client) machine to a port on the remote (ssh server) machine, which is then forwarded to a port on the destination machine. In this forwarding type, the SSH client listens on a given port and tunnels any connection to that port to the specified port on the remote SSH server, which then connects to a port on the destination machine. The destination machine can be the remote SSH server or any other machine. Local port forwarding is mostly used to connect to a remote service on an internal network such as a database or VNC server.
+
+In Linux, macOS, and other Unix systems, to create a local port forwarding, pass the -L option to the ssh client:
+
+ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER
+
+
+ssh -L 3336:db001.host:3306 user@pub01.host
+
